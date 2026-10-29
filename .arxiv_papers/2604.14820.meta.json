@@ -1,0 +1,17 @@
+{
+  "id": "2604.14820",
+  "title": "SWE-TRACE: Optimizing Long-Horizon SWE Agents Through Rubric Process Reward Models and Heuristic Test-Time Scaling",
+  "authors": [
+    "Hao Han",
+    "Jin Xie",
+    "Xuehao Ma",
+    "Weiquan Zhu",
+    "Ziyao Zhang",
+    "ZhiLiang Long",
+    "Hongkai Chen",
+    "Qingwen Ye"
+  ],
+  "published": "2026-04-16T09:41:47+00:00",
+  "extractor_version": 7,
+  "arxiv_version": "v1"
+}

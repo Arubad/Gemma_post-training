@@ -1,0 +1,18 @@
+{
+  "id": "2410.14684",
+  "title": "RepoGraph: Enhancing AI Software Engineering with Repository-level Code Graph",
+  "authors": [
+    "Siru Ouyang",
+    "Wenhao Yu",
+    "Kaixin Ma",
+    "Zilin Xiao",
+    "Zhihan Zhang",
+    "Mengzhao Jia",
+    "Jiawei Han",
+    "Hongming Zhang",
+    "Dong Yu"
+  ],
+  "published": "2024-10-03T05:45:26+00:00",
+  "extractor_version": 7,
+  "arxiv_version": "v2"
+}

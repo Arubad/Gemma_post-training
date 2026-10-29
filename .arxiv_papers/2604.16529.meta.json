@@ -1,0 +1,25 @@
+{
+  "id": "2604.16529",
+  "title": "Scaling Test-Time Compute for Agentic Coding",
+  "authors": [
+    "Joongwon Kim",
+    "Wannan Yang",
+    "Kelvin Niu",
+    "Hongming Zhang",
+    "Yun Zhu",
+    "Eryk Helenowski",
+    "Ruan Silva",
+    "Zhengxing Chen",
+    "Srinivasan Iyer",
+    "Manzil Zaheer",
+    "Daniel Fried",
+    "Hannaneh Hajishirzi",
+    "Sanjeev Arora",
+    "Gabriel Synnaeve",
+    "Ruslan Salakhutdinov",
+    "Anirudh Goyal"
+  ],
+  "published": "2026-04-16T17:39:33+00:00",
+  "extractor_version": 7,
+  "arxiv_version": "v1"
+}

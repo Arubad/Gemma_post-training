@@ -1,0 +1,17 @@
+{
+  "id": "2408.03910",
+  "title": "CodexGraph: Bridging Large Language Models and Code Repositories via Code Graph Databases",
+  "authors": [
+    "Xiangyan Liu",
+    "Bo Lan",
+    "Zhiyuan Hu",
+    "Yang Liu",
+    "Zhicheng Zhang",
+    "Fei Wang",
+    "Michael Shieh",
+    "Wenmeng Zhou"
+  ],
+  "published": "2024-08-07T17:13:59+00:00",
+  "extractor_version": 7,
+  "arxiv_version": "v3"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "2503.09089",
+  "title": "LocAgent: Graph-Guided LLM Agents for Code Localization",
+  "authors": [
+    "Zhaoling Chen",
+    "Xiangru Tang",
+    "Gangda Deng",
+    "Fang Wu",
+    "Jialong Wu",
+    "Zhiwei Jiang",
+    "Viktor Prasanna",
+    "Arman Cohan",
+    "Xingyao Wang"
+  ],
+  "published": "2025-03-12T05:55:01+00:00",
+  "extractor_version": 7,
+  "arxiv_version": "v2"
+}

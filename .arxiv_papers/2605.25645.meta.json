@@ -1,0 +1,14 @@
+{
+  "id": "2605.25645",
+  "title": "Fine-Tuning and Serving Gemma 4 31B on Google Cloud TPU: A Technical Comparison with GPU Baselines",
+  "authors": [
+    "Jatin Kishnani",
+    "Mayank Goel",
+    "Amit Singh",
+    "Pulkit Agrawal",
+    "Sairanjan Mishra"
+  ],
+  "published": "2026-05-25T09:51:59+00:00",
+  "extractor_version": 7,
+  "arxiv_version": "v3"
+}
