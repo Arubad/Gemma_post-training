@@ -1,0 +1,36 @@
+# Paper ablation: read-only localizer AgentTool (isolates exploration context from the coder;
+# skip_summarization returns its report verbatim). Each agent may use its own adapter.
+name: e4b_localizer
+model: e4b
+variant: localizer
+root:
+  name: coder
+  description: Autonomous software engineer that fixes issues in a Python repository.
+  adapter: main_lora
+  instruction: prompts/system.md
+  tools: [run_command, read_file, edit_file, write_file, get_status, submit_patch]
+localizer:
+  name: localizer
+  description: Read-only assistant. Give it the full problem statement as the request; it returns the files, line ranges and functions that must change.
+  adapter: main_lora
+  instruction: prompts/localizer.md
+  tools: [run_command, read_file, search_similar_code, get_code_neighbors, get_code_subgraph]
+  sampling:
+    temperature: 0.2
+    top_p: 0.95
+    max_output_tokens: 2048
+    thinking_budget: 0
+adapters:
+  main_lora: ${ADAPTER_DIR}
+sampling:
+  temperature: 0.4
+  top_p: 0.95
+  top_k: 64
+  max_output_tokens: 4096
+  seed: 1234
+  thinking_budget: 0
+evaluation:
+  timeout_seconds: 120
+  max_tool_calls: 40
+  max_time_minutes: 5
+  max_turns: 80

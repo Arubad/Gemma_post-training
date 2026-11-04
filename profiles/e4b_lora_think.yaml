@@ -1,0 +1,25 @@
+# Ablation: per-step rationale in the thought channel (rationale_mode=thinking). Budget 256 keeps
+# training thoughts (1-2 sentences) far from the force-close point of the ThinkingTokenBudgetLogitsProcessor.
+name: e4b_lora_think
+model: e4b
+variant: single
+root:
+  name: coder
+  description: Autonomous software engineer that fixes issues in a Python repository.
+  adapter: main_lora
+  instruction: prompts/system.md
+  tools: [run_command, read_file, edit_file, write_file, search_similar_code, get_code_neighbors, get_code_subgraph, get_status, submit_patch]
+adapters:
+  main_lora: ${ADAPTER_DIR}          # env var or --adapter main_lora=PATH on the CLI
+sampling:
+  temperature: 0.4
+  top_p: 0.95
+  top_k: 64
+  max_output_tokens: 4096
+  seed: 1234
+  thinking_budget: 256
+evaluation:
+  timeout_seconds: 120
+  max_tool_calls: 40
+  max_time_minutes: 5
+  max_turns: 80

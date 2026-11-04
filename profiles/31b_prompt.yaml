@@ -1,0 +1,23 @@
+# Main track: Gemma 4 31B prompt-only (the configuration family that holds the 0.24 public cap).
+# 31B decodes at ~25-45 tok/s on 4xL4 -> keep thinking off and outputs short; ~24-30 calls fit 5 min.
+name: 31b_prompt
+model: 31b
+variant: single
+root:
+  name: coder
+  description: Autonomous software engineer that fixes issues in a Python repository.
+  adapter: null
+  instruction: prompts/system.md
+  tools: [run_command, read_file, edit_file, write_file, search_similar_code, get_code_neighbors, get_code_subgraph, get_status, submit_patch]
+sampling:
+  temperature: 0.3
+  top_p: 0.95
+  top_k: 64
+  max_output_tokens: 4096
+  seed: 1234
+  thinking_budget: 0
+evaluation:
+  timeout_seconds: 120
+  max_tool_calls: 30
+  max_time_minutes: 5
+  max_turns: 60

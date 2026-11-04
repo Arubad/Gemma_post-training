@@ -1,0 +1,25 @@
+# Main track with the transferred recipe (adapter trained on dequantized 31B, see README).
+# Keep rank <= 32: higher ranks shrink the vLLM KV cache on 4xL4.
+name: 31b_lora
+model: 31b
+variant: single
+root:
+  name: coder
+  description: Autonomous software engineer that fixes issues in a Python repository.
+  adapter: main_lora
+  instruction: prompts/system.md
+  tools: [run_command, read_file, edit_file, write_file, search_similar_code, get_code_neighbors, get_code_subgraph, get_status, submit_patch]
+adapters:
+  main_lora: ${ADAPTER_DIR}
+sampling:
+  temperature: 0.3
+  top_p: 0.95
+  top_k: 64
+  max_output_tokens: 4096
+  seed: 1234
+  thinking_budget: 0
+evaluation:
+  timeout_seconds: 120
+  max_tool_calls: 30
+  max_time_minutes: 5
+  max_turns: 60

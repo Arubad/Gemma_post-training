@@ -1,0 +1,8 @@
+# local tests / CPU tooling
+pyyaml
+numpy
+networkx
+torch
+safetensors
+pytest
+# GPU notebooks additionally use: transformers>=5.6, peft, compressed-tensors, vllm (competition wheelhouse)
